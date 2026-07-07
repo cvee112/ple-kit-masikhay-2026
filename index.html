@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Road to R.M.D. — PLE Guide · Batch Masikhay 2026</title>
+<meta name="description" content="Step-by-step PRC application guide and PLE tips for UP-PGH Batch Masikhay 2026. October 2026 Physician Licensure Examination.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#6b1f2a;
+  --maroon-deep:#4a141d;
+  --ink:#2a1518;
+  --paper:#faf6ef;
+  --paper-warm:#f3ecdf;
+  --green:#1e5b3a;
+  --gold:#b8893b;
+  --gold-soft:#e5d3ae;
+  --line:rgba(74,20,29,.16);
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:16px;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+a{color:var(--maroon);text-decoration-color:var(--gold);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ---------- Hero ---------- */
+header{
+  background:linear-gradient(168deg,var(--maroon-deep) 0%,var(--maroon) 62%,#7d2833 100%);
+  color:var(--paper);
+  padding:56px 0 0;
+  position:relative;
+  overflow:hidden;
+}
+header::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 80% 55% at 85% -10%,rgba(184,137,59,.28),transparent 60%);
+}
+.eyebrow{
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-soft);font-weight:600;margin-bottom:18px;
+}
+h1{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:clamp(38px,8vw,60px);line-height:1.04;letter-spacing:-.01em;
+  margin-bottom:10px;
+}
+h1 .script{font-style:italic;font-weight:400;color:var(--gold-soft)}
+.hero-sub{max-width:52ch;color:rgba(250,246,239,.85);font-size:17px;margin-bottom:34px;position:relative;z-index:1}
+.hero-sub strong{color:#fff}
+
+/* Countdown band */
+.countdown{
+  position:relative;z-index:1;
+  background:rgba(0,0,0,.22);
+  border-top:1px solid rgba(229,211,174,.25);
+  padding:20px 0 24px;
+  margin-top:8px;
+}
+.countdown .wrap{display:flex;gap:28px;align-items:baseline;flex-wrap:wrap}
+.count-num{font-family:'Fraunces',serif;font-size:clamp(44px,9vw,64px);font-weight:700;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.count-label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;max-width:200px;line-height:1.45}
+.count-side{margin-left:auto;text-align:right;font-size:14px;color:rgba(250,246,239,.85)}
+.count-side b{display:block;color:#fff;font-size:15px}
+@media(max-width:560px){.count-side{margin-left:0;text-align:left}}
+
+/* ---------- Nav chips ---------- */
+nav.chips{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,246,239,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+nav.chips::-webkit-scrollbar{display:none}
+nav.chips .wrap{display:flex;gap:8px;padding:10px 20px;max-width:760px}
+nav.chips a{
+  flex:0 0 auto;font-size:13px;font-weight:600;text-decoration:none;
+  color:var(--maroon);background:var(--paper-warm);
+  border:1px solid var(--line);border-radius:99px;padding:7px 14px;white-space:nowrap;
+}
+nav.chips a:hover{background:var(--gold-soft)}
+
+/* ---------- Sections ---------- */
+section{padding:52px 0 8px}
+.sec-eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,5vw,34px);line-height:1.15;margin-bottom:14px}
+h3{font-family:'Fraunces',serif;font-weight:600;font-size:20px;margin:26px 0 8px}
+p{margin-bottom:14px;max-width:64ch}
+p.small,li.small{font-size:14px;color:rgba(42,21,24,.75)}
+
+/* ---------- Timeline (signature) ---------- */
+.timeline{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 22px 20px;margin:8px 0 6px;box-shadow:0 2px 10px rgba(74,20,29,.05);
+}
+.track{position:relative;height:6px;background:var(--paper-warm);border-radius:99px;margin:34px 6px 6px}
+.track-fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--green),var(--gold));border-radius:99px}
+.milestone{position:absolute;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:var(--maroon);border:3px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.milestone.today{width:18px;height:18px;background:var(--gold);z-index:2}
+.milestone .tip{
+  position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--maroon);white-space:nowrap;
+}
+.milestone.today .tip{color:var(--gold);bottom:24px}
+.track-labels{display:flex;justify-content:space-between;font-size:12px;color:rgba(42,21,24,.6);margin-top:14px}
+.dates-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:22px}
+.date-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.date-card b{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--maroon)}
+.date-card span{font-size:12.5px;color:rgba(42,21,24,.7);line-height:1.4;display:block;margin-top:2px}
+.date-card.hot{background:var(--maroon);border-color:var(--maroon)}
+.date-card.hot b{color:var(--gold-soft)}
+.date-card.hot span{color:rgba(250,246,239,.85)}
+
+/* ---------- Callouts ---------- */
+.callout{
+  border-left:4px solid var(--gold);background:#fff;border-radius:0 10px 10px 0;
+  padding:14px 18px;margin:18px 0;font-size:15px;
+}
+.callout.warn{border-left-color:var(--maroon)}
+.callout b{color:var(--maroon)}
+
+/* ---------- Checklist ---------- */
+.check{list-style:none;margin:12px 0 20px}
+.check li{
+  display:flex;gap:12px;align-items:flex-start;
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:13px 15px;margin-bottom:8px;
+}
+.check input[type=checkbox]{
+  appearance:none;flex:0 0 auto;width:22px;height:22px;margin-top:1px;
+  border:2px solid var(--maroon);border-radius:6px;cursor:pointer;position:relative;background:#fff;
+}
+.check input[type=checkbox]:checked{background:var(--green);border-color:var(--green)}
+.check input[type=checkbox]:checked::after{
+  content:"";position:absolute;left:6px;top:2px;width:5px;height:11px;
+  border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg);
+}
+.check label{cursor:pointer;font-size:15px}
+.check label b{color:var(--maroon)}
+.check label .note{display:block;font-size:13px;color:rgba(42,21,24,.65);margin-top:2px}
+.check li:has(input:checked){background:#f2f7f0;border-color:rgba(30,91,58,.3)}
+.check li:has(input:checked) label{text-decoration:line-through;text-decoration-color:rgba(30,91,58,.5);text-decoration-thickness:1.5px}
+.progress-note{font-size:13px;font-weight:600;color:var(--green);margin-bottom:6px}
+
+/* ---------- Steps ---------- */
+.steps{list-style:none;counter-reset:step;margin:16px 0}
+.steps>li{
+  counter-increment:step;position:relative;
+  padding:0 0 26px 56px;
+}
+.steps>li::before{
+  content:counter(step,decimal-leading-zero);
+  position:absolute;left:0;top:-2px;
+  font-family:'Fraunces',serif;font-weight:700;font-size:19px;
+  color:var(--paper);background:var(--maroon);
+  width:40px;height:40px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps>li::after{
+  content:"";position:absolute;left:19px;top:44px;bottom:6px;width:2px;
+  background:linear-gradient(var(--line),transparent);
+}
+.steps>li:last-child::after{display:none}
+.steps h4{font-weight:700;font-size:16.5px;margin-bottom:5px;color:var(--maroon-deep)}
+.steps p,.steps ul{font-size:15px;margin-bottom:8px}
+.steps ul{padding-left:18px}
+.steps ul li{margin-bottom:4px}
+
+/* ---------- Subject table ---------- */
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:14.5px;margin:14px 0 20px}
+th{background:var(--maroon);color:var(--gold-soft);text-align:left;padding:11px 14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:600;color:var(--maroon);white-space:nowrap}
+tr:nth-child(even) td{background:var(--paper)}
+
+/* ---------- Tips ---------- */
+.tip-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin-bottom:12px}
+.tip-card h4{font-family:'Fraunces',serif;font-size:18px;color:var(--maroon);margin-bottom:6px}
+.tip-card p,.tip-card ul{font-size:15px;margin-bottom:6px}
+.tip-card ul{padding-left:18px}
+.tip-card ul li{margin-bottom:5px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--maroon-deep);color:rgba(250,246,239,.8);margin-top:64px;padding:44px 0 56px;font-size:14px}
+footer h2{color:var(--gold-soft);font-size:24px}
+footer a{color:var(--gold-soft)}
+footer .motto{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--gold-soft);margin:24px 0 6px}
+.src-list{padding-left:18px;margin:10px 0 18px}
+.src-list li{margin-bottom:6px}
+.divider{height:1px;background:rgba(229,211,174,.25);margin:26px 0}
+
+@media print{
+  nav.chips,.countdown{display:none}
+  header{background:#fff;color:var(--ink)}
+  .eyebrow,.hero-sub{color:var(--ink)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Batch Masikhay 2026 · UP-PGH · PLE Kit</div>
+    <h1>Road to <span class="script">Lic. No.</span></h1>
+    <p class="hero-sub">Your complete guide to the <strong>October 2026 Physician Licensure Examination</strong> — PRC application, requirements, deadlines, and review strategy. <em>Lakas ng loob, lingkod ng bayan.</em></p>
+  </div>
+  <div class="countdown">
+    <div class="wrap">
+      <div>
+        <div class="count-num" id="days-left">—</div>
+        <div class="count-label" id="count-label">days left to file your application</div>
+      </div>
+      <div class="count-side">
+        <b>Filing deadline: September 3, 2026</b>
+        Exam: October 3–4 &amp; 10–11, 2026
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="chips" aria-label="Sections">
+  <div class="wrap">
+    <a href="#dates">Key dates</a>
+    <a href="#docs">Documents</a>
+    <a href="#apply">How to apply</a>
+    <a href="#appointment">Appointment day</a>
+    <a href="#coverage">Exam coverage</a>
+    <a href="#examday">Exam day</a>
+    <a href="#tips">PLE tips</a>
+    <a href="#after">After the exam</a>
+  </div>
+</nav>
+
+<main>
+
+<section id="dates">
+  <div class="wrap">
+    <div class="sec-eyebrow">Timeline</div>
+    <h2>Key dates for the October 2026 PLE</h2>
+    <p>Per the official PRC 2026 examination calendar (Resolution No. 2113, s. 2025). The filing window is <b>already open</b> — apply early. PRC accepts no late applications and grants no extensions.</p>
+
+    <div class="timeline" aria-label="Filing window timeline">
+      <div class="track" id="track">
+        <div class="track-fill" id="track-fill" style="width:0%"></div>
+      </div>
+      <div class="track-labels">
+        <span>Jul 3 · Filing opens</span>
+        <span>Sep 3 · Deadline</span>
+        <span>Oct 3–11 · Exam</span>
+        <span>Oct 16 · Results*</span>
+      </div>
+      <div class="dates-grid">
+        <div class="date-card"><b>July 3, 2026</b><span>Opening of online applications via LERIS</span></div>
+        <div class="date-card hot"><b>September 3, 2026</b><span>Deadline of filing — strict, no extensions</span></div>
+        <div class="date-card"><b>Oct 3, 4, 10, 11</b><span>Exam days (two weekends, Sat–Sun)</span></div>
+        <div class="date-card"><b>October 16, 2026</b><span>*Target release of results (may vary)</span></div>
+      </div>
+    </div>
+
+    <p class="small" style="margin-top:14px">Testing centers: NCR, Baguio, Cagayan de Oro, Cebu, Davao, Iloilo, Koronadal, Legazpi, Lucena, Pampanga, Rosales, Tacloban, Tuguegarao, and Zamboanga. Most of the batch will select <b>NCR (Manila)</b>.</p>
+
+    <div class="callout warn"><b>Don't wait for August.</b> PRC office appointment slots in NCR fill up fast near the deadline, and any document problem (TOR remarks, PSA copy quality, photo rejection) needs buffer time to fix. Target filing within July.</div>
+  </div>
+</section>
+
+<section id="docs">
+  <div class="wrap">
+    <div class="sec-eyebrow">Prepare before you file</div>
+    <h2>Documentary requirements</h2>
+    <p>For <b>first-time takers</b> who are Filipino citizens and graduates of a Philippine medical school (that's most of us). Tick items off as you gather them:</p>
+    <p class="progress-note" id="doc-progress">0 of 8 ready</p>
+
+    <ul class="check" id="doc-checklist">
+      <li><input type="checkbox" id="c1"><label for="c1"><b>PSA Birth Certificate</b> — original, on security paper.<span class="note">If entries are unreadable, secure a Local Civil Registrar copy (Form 102/1A) as backup. Order via PSAHelpline or PSA Serbilis if you don't have a clean copy — allow 1–2 weeks for delivery.</span></label></li>
+      <li><input type="checkbox" id="c2"><label for="c2"><b>PSA Marriage Certificate</b> — for married female applicants only.<span class="note">Required if you'll register under your married name.</span></label></li>
+      <li><input type="checkbox" id="c3"><label for="c3"><b>Transcript of Records (TOR)</b> — original + photocopy, with scanned picture and the remark <b>"For Board Examination Purposes"</b>, bearing your exact date of graduation and Special Order number.<span class="note">Request early from the UPCM Registrar — this is the most common bottleneck. Verify the remark is printed before leaving the window.</span></label></li>
+      <li><input type="checkbox" id="c4"><label for="c4"><b>MD Diploma</b> — original + photocopy.</label></li>
+      <li><input type="checkbox" id="c5"><label for="c5"><b>Certificate of Post-Graduate Internship</b> — original, issued by an APMC-accredited hospital.<span class="note">PGH is APMC-accredited. Coordinate with the internship office / HR for issuance after completion of the 12-month internship.</span></label></li>
+      <li><input type="checkbox" id="c6"><label for="c6"><b>Two (2) Certificates of Good Moral Character</b> — originals, from any two of: (a) your medical school, (b) the hospital where you completed internship, (c) your community/parish.<span class="note">Easiest combo for us: one from UPCM (Dean's office) + one from PGH.</span></label></li>
+      <li><input type="checkbox" id="c7"><label for="c7"><b>Passport-size photos with complete name tag</b> — colored, white background, decent/collared attire.<span class="note">Bring extras (4+ copies). Name tag format: FIRST NAME MI LAST NAME printed below your face. You'll reuse these for registration after passing.</span></label></li>
+      <li><input type="checkbox" id="c8"><label for="c8"><b>Digital 2×2 photo for LERIS upload</b> — square format, white background, collared attire, ears visible, no eyeglasses.<span class="note">This is separate from the printed photos. Non-square or low-quality files get rejected by the uploader — crop to a perfect square first.</span></label></li>
+    </ul>
+
+    <div class="callout"><b>Also bring on appointment day:</b> the printed LERIS application form, valid government ID, payment proof, documentary stamps (buy inside the PRC compound or from official sources — not from fixers outside), and a long brown envelope + long transparent plastic envelope.</div>
+  </div>
+</section>
+
+<section id="apply">
+  <div class="wrap">
+    <div class="sec-eyebrow">Step by step</div>
+    <h2>How to apply via LERIS</h2>
+    <p>All applications go through the PRC's <a href="https://online.prc.gov.ph" target="_blank" rel="noopener">Licensure Examination and Registration Information System (LERIS)</a>. First-timers must then appear <b>personally</b> at the PRC office on their appointment date.</p>
+
+    <ol class="steps">
+      <li>
+        <h4>Create your LERIS account</h4>
+        <p>Go to <a href="https://online.prc.gov.ph" target="_blank" rel="noopener">online.prc.gov.ph</a> → Register. Use an email you'll keep long-term (you'll use this same account for your license later). Enter your name, birthdate, and details <b>exactly as they appear on your PSA birth certificate</b> — mismatches cause failed transactions and delayed appointments.</p>
+      </li>
+      <li>
+        <h4>Complete your profile &amp; upload your photo</h4>
+        <p>Fill in personal, educational, and internship information. Upload the square 2×2 digital photo (white background, collared attire, ears visible, no glasses). If the uploader rejects it, re-crop to an exact square and check the file size.</p>
+      </li>
+      <li>
+        <h4>Select the transaction</h4>
+        <p>From your profile: <b>Select Transaction → Examination → Physician</b>. Choose the <b>October 2026</b> exam and your preferred testing center (e.g., Manila/NCR).</p>
+      </li>
+      <li>
+        <h4>Book your PRC appointment</h4>
+        <p>Pick a PRC office and an available appointment date for document submission. NCR slots go quickly — book the earliest date you can be ready for. Note your appointment details and reference number.</p>
+      </li>
+      <li>
+        <h4>Pay the examination fee — ₱900</h4>
+        <p>Pay through the PRC-authorized channels shown in LERIS (LandBank online, GCash/Maya, and other listed partners). Keep the receipt/screenshot. LERIS usually reflects payment within a day or two — if a transaction fails, <b>don't pay twice immediately</b>; wait for the system to confirm first.</p>
+      </li>
+      <li>
+        <h4>Print your application form</h4>
+        <p>Once payment is confirmed, download and print the system-generated application form. Print at home to avoid queueing for printing services at PRC.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="appointment">
+  <div class="wrap">
+    <div class="sec-eyebrow">The golden ticket</div>
+    <h2>Appointment day → Notice of Admission</h2>
+    <ol class="steps">
+      <li>
+        <h4>Go to PRC on your scheduled date</h4>
+        <p>Bring the complete set: printed application form, all original documents + photocopies, photos, valid ID, payment proof, documentary stamps, and envelopes. <b>Incomplete requirements will not be accepted</b> — there's no "balik na lang" grace after the deadline.</p>
+      </li>
+      <li>
+        <h4>Document verification</h4>
+        <p>PRC staff review and verify your documents against your online record. Originals of the TOR, diploma, internship certificate, and GMCs are inspected; keep everything organized in your envelope in the order listed.</p>
+      </li>
+      <li>
+        <h4>Receive your Notice of Admission (NOA)</h4>
+        <p>If everything checks out, you get your <b>NOA</b> and Program of Examination. The NOA is your entry pass on exam day — photograph it, photocopy it, and keep the original safe.</p>
+      </li>
+      <li>
+        <h4>Check your room assignment</h4>
+        <p>Room assignments are posted on the PRC website and official pages a few days before each exam weekend. Visit your building/room in advance so you know the commute, gates, and floor.</p>
+      </li>
+    </ol>
+    <div class="callout warn"><b>Beware of fixers.</b> PRC repeatedly warns against individuals claiming PRC connections who offer to "facilitate" applications or "guarantee" passing. Report them; never hand over documents or money. Results are final — there is no re-checking of test papers.</div>
+  </div>
+</section>
+
+<section id="coverage">
+  <div class="wrap">
+    <div class="sec-eyebrow">Know the battlefield</div>
+    <h2>Exam structure &amp; coverage</h2>
+    <p>The PLE runs over <b>four days across two weekends</b> and covers <b>12 subjects</b>, each in multiple-choice format. To pass, you need a <b>general average of at least 75%</b> with <b>no subject rating below 50%</b>.</p>
+
+    <table>
+      <thead><tr><th>Cluster</th><th>Subjects</th></tr></thead>
+      <tbody>
+        <tr><td>Basic sciences</td><td>Anatomy &amp; Histology · Physiology · Biochemistry · Microbiology &amp; Parasitology</td></tr>
+        <tr><td>Bridging sciences</td><td>Pathology · Pharmacology &amp; Therapeutics · Legal Medicine, Ethics &amp; Medical Jurisprudence</td></tr>
+        <tr><td>Clinical sciences</td><td>Medicine · Surgery (incl. Ophthalmology &amp; ORL) · Obstetrics &amp; Gynecology · Pediatrics &amp; Nutrition · Preventive Medicine &amp; Public Health</td></tr>
+      </tbody>
+    </table>
+    <p class="small">The exact per-day subject schedule is in the official <b>Program of Examination</b> for October 2026, released on the PRC website closer to the exam — check it once posted, since day groupings can shift between administrations.</p>
+  </div>
+</section>
+
+<section id="examday">
+  <div class="wrap">
+    <div class="sec-eyebrow">Logistics</div>
+    <h2>Exam day: what to bring, what to leave</h2>
+    <h3>Bring</h3>
+    <ul class="check">
+      <li><input type="checkbox" id="e1"><label for="e1"><b>Notice of Admission (NOA)</b> + valid ID</label></li>
+      <li><input type="checkbox" id="e2"><label for="e2"><b>Two or more No. 2 pencils</b>, eraser, sharpener — answer sheets are shaded, not written</label></li>
+      <li><input type="checkbox" id="e3"><label for="e3"><b>Long transparent plastic envelope</b> for valuables and allowed items, plus a long brown envelope</label></li>
+      <li><input type="checkbox" id="e4"><label for="e4"><b>Ballpen (black)</b> for forms, and your Program of Examination</label></li>
+      <li><input type="checkbox" id="e5"><label for="e5"><b>Water and light snacks</b> as permitted, watch (analog), and appropriate attire — the tradition is your school uniform or decent collared attire; check the October Program of Examination for the official dress instruction</label></li>
+    </ul>
+    <h3>Leave at home</h3>
+    <p class="small">Phones, smartwatches, and any electronic or programmable devices are prohibited inside testing rooms. Bags are typically left outside or at designated areas — bring only what fits your transparent envelope. Arrive at least an hour before gate call; on exam weekends, Manila traffic near university testing centers is its own subject.</p>
+  </div>
+</section>
+
+<section id="tips">
+  <div class="wrap">
+    <div class="sec-eyebrow">From your batchmates &amp; those who came before</div>
+    <h2>PLE review strategy</h2>
+
+    <div class="tip-card">
+      <h4>1 · Structure the runway (roughly 3 phases)</h4>
+      <ul>
+        <li><b>Foundation (first ~6 weeks):</b> full pass through high-yield reviewers per subject. Don't chase completeness — chase coverage. Basic sciences fade fastest post-internship; front-load Anatomy, Physio, Biochem, Micro.</li>
+        <li><b>Consolidation (next ~4–5 weeks):</b> second pass focused on weak subjects flagged by your practice scores. Convert notes into recall material (flashcards, one-page summaries).</li>
+        <li><b>Simulation (final ~3 weeks):</b> timed, full-length mock exams under exam conditions. Review errors > reviewing notes. Taper the last 3 days — sleep is a performance intervention.</li>
+      </ul>
+    </div>
+
+    <div class="tip-card">
+      <h4>2 · Practice questions are the main event</h4>
+      <p>Passive rereading feels productive and isn't. Retrieval practice — answering questions, then studying the rationales for <em>both</em> right and wrong answers — is the highest-yield use of an hour. Track per-subject accuracy so your remaining time flows to your weakest subjects, not your favorite ones.</p>
+      <p class="small">Remember the passing math: 75% average, nothing below 50%. A weak subject you ignore is the single most dangerous thing on the board — it can sink an otherwise strong average. Shore up floors before raising ceilings.</p>
+    </div>
+
+    <div class="tip-card">
+      <h4>3 · Twelve subjects, one calendar</h4>
+      <p>Interleave rather than block for weeks on one subject: two subjects a day (one basic, one clinical) beats a month of Medicine followed by cramming Biochem. Spaced repetition on the same material at widening intervals is what makes it stick to October.</p>
+    </div>
+
+    <div class="tip-card">
+      <h4>4 · Between the two weekends</h4>
+      <p>You get a week between exam days. Resist post-mortems on the first weekend's papers — you can't change them, and dwelling costs you the second weekend. Use the gap week for the remaining subjects only.</p>
+    </div>
+
+    <div class="tip-card">
+      <h4>5 · Take care of the examinee</h4>
+      <p>Review with people who steady you. Eat, run, sleep. The batch that carried each other through duty nights at PGH can carry each other through this — check in on your review group, and ask for help early if you're struggling. <em>Lakas ng loob</em> includes knowing when to rest.</p>
+    </div>
+  </div>
+</section>
+
+<section id="after">
+  <div class="wrap">
+    <div class="sec-eyebrow">The other side</div>
+    <h2>After the exam</h2>
+    <ol class="steps">
+      <li>
+        <h4>Results release</h4>
+        <p>Target release is <b>October 16, 2026</b> — PRC has recently released PLE results within about four working days of the last exam day. Verify your individual rating through the PRC's online Verification of Rating once posted.</p>
+      </li>
+      <li>
+        <h4>Initial registration (getting your license)</h4>
+        <p>Passers register online via LERIS for the issuance of the <b>Certificate of Registration</b> and <b>Professional Identification Card</b>. Based on the March 2026 cycle, requirements included: the duly accomplished <b>Oath Form (Panunumpa ng Propesyonal)</b>, your NOA (for identification), <b>2 passport-size photos</b> (white background, complete name tag), <b>2 sets of documentary stamps</b>, and <b>1 short brown envelope</b>. You personally sign the Roster of Registered Professionals.</p>
+      </li>
+      <li>
+        <h4>Oathtaking</h4>
+        <p>The PRC and the Board of Medicine announce the oathtaking ceremony date and venue after results are released. Then it's official: <b>M.D., Lic. No. ______</b>.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Sources &amp; help</h2>
+    <p>This guide summarizes official PRC issuances as of July 2026. Requirements and schedules can change — always cross-check against the official sources before acting:</p>
+    <ul class="src-list">
+      <li><a href="https://www.prc.gov.ph/2026-schedule-examination" target="_blank" rel="noopener">PRC 2026 Schedule of Examinations</a> (Resolution No. 2113, s. 2025)</li>
+      <li><a href="https://www.prc.gov.ph/list-of-requirements" target="_blank" rel="noopener">PRC List of Requirements</a></li>
+      <li><a href="https://online.prc.gov.ph" target="_blank" rel="noopener">LERIS online application portal</a></li>
+      <li><a href="https://www.prc.gov.ph" target="_blank" rel="noopener">PRC official website</a> · <a href="https://www.facebook.com/professionalregulationcommission" target="_blank" rel="noopener">PRC Facebook</a></li>
+    </ul>
+    <p>For application concerns: email the PRC Licensure Office at <a href="mailto:licensure.office1@prc.gov.ph">licensure.office1@prc.gov.ph</a> or <a href="mailto:licensure.division@prc.gov.ph">licensure.division@prc.gov.ph</a>. For LERIS account recovery or record mismatches, file a ticket at <a href="https://crms.prc.gov.ph" target="_blank" rel="noopener">crms.prc.gov.ph</a>.</p>
+    <div class="divider"></div>
+    <p class="motto">Lakas ng loob, lingkod ng bayan.</p>
+    <p>Prepared with love for <b>Batch Masikhay 2026</b> · UP-PGH Post-Graduate Internship · See you at the oathtaking, Doktor. 🩺</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // --- Countdown to filing deadline ---
+  var deadline = new Date(2026, 8, 3, 23, 59, 59); // Sep 3, 2026
+  var examStart = new Date(2026, 9, 3);            // Oct 3, 2026
+  var examEnd   = new Date(2026, 9, 11, 23, 59);   // Oct 11, 2026
+  var open      = new Date(2026, 6, 3);            // Jul 3, 2026
+  var results   = new Date(2026, 9, 16);           // Oct 16, 2026
+  var now = new Date();
+
+  var numEl = document.getElementById('days-left');
+  var labelEl = document.getElementById('count-label');
+
+  function daysBetween(a,b){ return Math.ceil((b - a) / 86400000); }
+
+  if (now <= deadline) {
+    numEl.textContent = daysBetween(now, deadline);
+    labelEl.textContent = 'days left to file your application';
+  } else if (now <= examEnd) {
+    numEl.textContent = Math.max(0, daysBetween(now, examStart));
+    labelEl.textContent = now < examStart ? 'days until the first exam day' : 'exam weekends in progress — kaya niyo \u2019yan!';
+    if (now >= examStart) numEl.textContent = '\uD83D\uDCAA';
+  } else if (now <= results) {
+    numEl.textContent = daysBetween(now, results);
+    labelEl.textContent = 'days until target release of results';
+  } else {
+    numEl.textContent = 'M.D.';
+    labelEl.textContent = 'Congratulations, Batch Masikhay!';
+  }
+
+  // --- Timeline fill + markers ---
+  var span = results - open;
+  function pct(d){ return Math.min(100, Math.max(0, ((d - open) / span) * 100)); }
+  var fill = document.getElementById('track-fill');
+  fill.style.width = pct(now) + '%';
+
+  var track = document.getElementById('track');
+  var marks = [
+    {d: open, label: null},
+    {d: deadline, label: null},
+    {d: examStart, label: null},
+    {d: results, label: null}
+  ];
+  marks.forEach(function(m){
+    var el = document.createElement('div');
+    el.className = 'milestone';
+    el.style.left = pct(m.d) + '%';
+    track.appendChild(el);
+  });
+  if (now >= open && now <= results) {
+    var t = document.createElement('div');
+    t.className = 'milestone today';
+    t.style.left = pct(now) + '%';
+    t.innerHTML = '<span class="tip">Today</span>';
+    track.appendChild(t);
+  }
+
+  // --- Document checklist progress ---
+  var docList = document.getElementById('doc-checklist');
+  var progress = document.getElementById('doc-progress');
+  function updateProgress(){
+    var boxes = docList.querySelectorAll('input[type=checkbox]');
+    var done = docList.querySelectorAll('input[type=checkbox]:checked').length;
+    progress.textContent = done + ' of ' + boxes.length + ' ready' + (done === boxes.length ? ' — file na, Doc! \u2705' : '');
+  }
+  docList.addEventListener('change', updateProgress);
+  updateProgress();
+})();
+</script>
+</body>
+</html>
